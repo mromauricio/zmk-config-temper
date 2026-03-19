@@ -11,11 +11,19 @@
 #   - board: nice_nano_v2
 #     shield: reviung41
 #
+#---
+#include:
+ # - board: nice_nano_v2
+  #  shield: temper_left nice_view_adapter nice_epaper
+  #- board: nice_nano_v2
+   # shield: temper_right nice_view_adapter nice_epaper
+ # - board: nice_nano
+  #  shield: settings_reset
 ---
 include:
-  - board: nice_nano_v2
+  - board: nice_nano//zmk
     shield: temper_left nice_view_adapter nice_epaper
-  - board: nice_nano_v2
+  - board: nice_nano//zmk
     shield: temper_right nice_view_adapter nice_epaper
-  - board: nice_nano
+  - board: nice_nano//zmk
     shield: settings_reset
