@@ -307,6 +307,20 @@
                 <&macro_release>,
                 <&kp N2 &kp RALT &kp RSHFT>;
         };
+
+        ti_brasil: ti_brasil {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp T &kp I &kp DOT &kp B &kp R &kp A &kp S &kp I &kp L &kp AT &kp A &kp C &kp E &kp R &kp DOT &kp C &kp O &kp M &none>;
+            label = "TI_BRASIL";
+        };
+
+        mau_acer: mau_acer {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp C &kp DOT &kp M &kp A &kp U &kp R &kp I &kp C &kp I &kp O &kp DOT &kp R &kp O &kp D &kp R &kp I &kp G &kp U &kp E &kp S &kp AT &kp A &kp C &kp E &kp R &kp DOT &kp C &kp O &kp M &none>;
+            label = "MAU_ACER";
+        };
     };
 
     keymap {
@@ -362,10 +376,10 @@
 
         accent {
             bindings = <
-&kp HASH  &kp DOLLAR   &kp PERCENT      &kp AMPS      &kp STAR  &trans  &trans  &trans  &trans  &trans
-&kp APOS  &kp GRAVE    &kp TILDE        &kp CARET     &trans    &trans  &trans  &trans  &trans  &trans
-&trans    &kp AT_SIGN  &kp EXCLAMATION  &kp QUESTION  &trans    &trans  &trans  &trans  &trans  &trans
-                       &trans           &trans        &trans    &trans  &trans  &trans
+&kp HASH  &kp DOLLAR   &kp PERCENT      &kp AMPS      &kp STAR  &trans  &trans      &trans     &trans  &trans
+&kp APOS  &kp GRAVE    &kp TILDE        &kp CARET     &trans    &trans  &ti_brasil  &mau_acer  &trans  &trans
+&trans    &kp AT_SIGN  &kp EXCLAMATION  &kp QUESTION  &trans    &trans  &trans      &trans     &trans  &trans
+                       &trans           &trans        &trans    &trans  &trans      &trans
             >;
         };
     };
