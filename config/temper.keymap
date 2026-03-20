@@ -315,10 +315,10 @@
         default_layer {
             label = "DEFAULT";
             bindings = <
-&kp Q        &kp W       &kp E                      &kp R               &kp T      &kp Y          &kp U         &kp I                      &kp O       &app_paste
-&hm LALT A   &hm LGUI S  &hm LCTRL D                &hm LSHFT F         &kp G      &search_dance  &hm RSHFT J   &hm RCTRL K                &hm RGUI L  &hm RALT SEMI
-&caps_dance  &cut_dance  &copy_dance                &paste_dance        &kp B      &kp N          &kp M         &kp COMMA                  &kp DOT     &kp FSLH
-                         &tp LG(LC(LA(LSHFT))) TAB  &mt CAPSLOCK SPACE  &kp ENTER  &kp SPACE      &lt SYM BSPC  &tp LG(LC(LA(LSHFT))) ESC
+&kp Q             &kp W           &mt LEFT_BRACE E  &kp R               &kp T             &kp Y          &mt LEFT_BRACE U  &mt LEFT_BRACE I  &mt APOS O       &app_paste
+&mt APOSTROPHE A  &hm LEFT_ALT S  &hm LCTRL D       &hm LSHFT F         &kp G             &search_dance  &hm RSHFT J       &hm RCTRL K       &hm RIGHT_ALT L  &hm RIGHT_GUI SEMI
+&caps_dance       &cut_dance      &copy_dance       &paste_dance        &kp B             &kp N          &kp M             &kp COMMA         &kp DOT          &kp FSLH
+                                  &lt 2 TAB         &mt CAPSLOCK SPACE  &lt 3 LEFT_BRACE  &kp ENTER      &kp BACKSPACE     &lt 5 DELETE
             >;
         };
 
@@ -357,6 +357,15 @@
 &bt BT_CLR  &bt BT_NXT  &bt BT_PRV    &bootloader   &sys_reset    &sys_reset  &bootloader  &none   &none   &none
 &kp F11     &kp F12     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &kp LNLCK   &nomachine   &none   &none   &tog WIN
 &kp F1      &kp F2      &kp F3        &kp F4        &kp F5        &kp F6      &kp F7       &kp F8  &kp F9  &kp F10 ______ ______ ______ ______ ______ ______
+            >;
+        };
+
+        accent {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
