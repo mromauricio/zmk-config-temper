@@ -362,10 +362,10 @@
 
         accent {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans  &trans
+&kp HASH  &kp DOLLAR   &kp PERCENT      &kp AMPS      &kp STAR  &trans  &trans  &trans  &trans  &trans
+&kp APOS  &kp GRAVE    &kp TILDE        &kp CARET     &trans    &trans  &trans  &trans  &trans  &trans
+&trans    &kp AT_SIGN  &kp EXCLAMATION  &kp QUESTION  &trans    &trans  &trans  &trans  &trans  &trans
+                       &trans           &trans        &trans    &trans  &trans  &trans
             >;
         };
     };
