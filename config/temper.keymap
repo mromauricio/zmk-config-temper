@@ -329,10 +329,10 @@
         default_layer {
             label = "DEFAULT";
             bindings = <
-&kp Q             &kp W           &mt LEFT_BRACKET E  &kp R         &kp T        &kp Y          &mt LEFT_BRACKET U  &mt LEFT_BRACKET I  &mt APOS O       &app_paste
-&mt APOSTROPHE A  &hm LEFT_ALT S  &hm LCTRL D         &hm LSHFT F   &kp G        &search_dance  &hm RSHFT J         &hm RCTRL K         &hm RIGHT_ALT L  &hm RIGHT_GUI SEMI
-&caps_dance       &cut_dance      &copy_dance         &paste_dance  &kp B        &kp N          &kp M               &kp COMMA           &kp DOT          &kp FSLH
-                                  &lt 2 TAB           &kp SPACE     &lt 3 SPACE  &kp ENTER      &kp BACKSPACE       &lt 5 DELETE
+&kp Q             &kp W           &mt LEFT_BRACKET E  &kp R           &kp T               &kp Y          &mt LEFT_BRACKET U  &mt LEFT_BRACKET I  &mt APOS O       &app_paste
+&mt APOSTROPHE A  &hm LEFT_ALT S  &hm LCTRL D         &hm LSHFT F     &kp G               &search_dance  &hm RSHFT J         &hm RCTRL K         &hm RIGHT_ALT L  &hm RIGHT_GUI SEMI
+&caps_dance       &cut_dance      &copy_dance         &paste_dance    &kp B               &kp N          &kp M               &kp COMMA           &kp DOT          &kp FSLH
+                                  &lt 2 TAB           &mt CAPS SPACE  &lt 3 LEFT_BRACKET  &kp ENTER      &kp BACKSPACE       &lt 5 DELETE
             >;
         };
 
