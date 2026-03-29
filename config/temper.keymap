@@ -280,27 +280,7 @@
             bindings = <&macro_tap>, <&kp LS(GRAVE) &kp LS(GRAVE) &kp LEFT>;
         };
 
-        nomachine: nomachine_settings {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp RCTRL &kp RALT &kp N0>,
-                <&macro_release>,
-                <&kp N0 &kp RALT &kp RCTRL>;
-        };
-
         // Macro to type euro marke
-
-        euro: euro_settings {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp RSHFT &kp RALT &kp N2>,
-                <&macro_release>,
-                <&kp N2 &kp RALT &kp RSHFT>;
-        };
 
         ti_brasil: ti_brasil {
             compatible = "zmk,behavior-macro";
@@ -369,7 +349,7 @@
             label = "FUNC";
             bindings = <
 &bt BT_CLR  &bt BT_NXT  &bt BT_PRV    &bootloader   &sys_reset    &sys_reset  &bootloader  &none   &none   &none
-&kp F11     &kp F12     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &kp LNLCK   &nomachine   &none   &none   &tog WIN
+&kp F11     &kp F12     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &kp LNLCK   &none        &none   &none   &tog WIN
 &kp F1      &kp F2      &kp F3        &kp F4        &kp F5        &kp F6      &kp F7       &kp F8  &kp F9  &kp F10 ______ ______ ______ ______ ______ ______
             >;
         };
