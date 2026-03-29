@@ -180,7 +180,7 @@
         lp_rp_combo {
             timeout-ms = <50>;
             key-positions = <13 14>;
-            layers = <SYM>;
+            layers = <0>;
             bindings = <&lp_rp_macro>;
         };
 
