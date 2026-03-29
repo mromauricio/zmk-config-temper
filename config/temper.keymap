@@ -8,7 +8,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/pointing.h>
 
 #define DEFAULT 0
 #define WIN 1
@@ -195,30 +194,14 @@
         };
 
         // Combo to press the middle mouse button
-
-        mmb_combo {
-            timeout-ms = <50>;
-            key-positions = <25 26>;
-            layers = <0>;
-            bindings = <&mkp MCLK>;
-        };
-
         // Combo to go Next
-
-        next_combo {
-            timeout-ms = <50>;
-            key-positions = <22 21>;
-            layers = <0>;
-            bindings = <&kp C_NEXT>;
-        };
-
         // Combo to go Previous
 
-        prev_combo {
+        sq_combo {
+            bindings = <&sq_macro>;
+            key-positions = <1 2>;
             timeout-ms = <50>;
-            key-positions = <21 22>;
             layers = <0>;
-            bindings = <&kp C_PREV>;
         };
     };
 
@@ -329,6 +312,12 @@
             #binding-cells = <0>;
             bindings = <&kp C &kp DOT &kp M &kp A &kp U &kp R &kp I &kp C &kp I &kp O &kp DOT &kp R &kp O &kp D &kp R &kp I &kp G &kp U &kp E &kp S &kp AT &kp A &kp C &kp E &kp R &kp DOT &kp C &kp O &kp M &none>;
             label = "MAU_ACER";
+        };
+
+        sq_macro: sq_macro_cursor {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp GRAVE &kp GRAVE &kp LEFT>;
         };
     };
 
