@@ -48,14 +48,14 @@
         copy_dance: tapdance_copy {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <180>;
+            tapping-term-ms = <250>;
             bindings = <&kp C>, <&kp RC(C)>;
         };
 
         copy_w_dance: tapdancew_copy {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <180>;
+            tapping-term-ms = <250>;
             bindings = <&kp C>, <&kp LC(C)>;
         };
 
@@ -64,14 +64,14 @@
         paste_dance: tabdance_paste {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <180>;
+            tapping-term-ms = <250>;
             bindings = <&kp V>, <&kp RC(V)>;
         };
 
         paste_w_dance: tabdancew_paste {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <180>;
+            tapping-term-ms = <250>;
             bindings = <&kp V>, <&kp LC(V)>;
         };
 
@@ -80,7 +80,7 @@
         dot_spc: dot_space {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
             bindings = <&kp DOT>, <&kp SPACE>;
         };
 
@@ -89,7 +89,7 @@
         caps_dance: tapdance_caps {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <280>;
+            tapping-term-ms = <250>;
             bindings = <&kp Z>, <&kp CAPS>;
         };
 
@@ -98,14 +98,14 @@
         cut_dance: tapdance_cut {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <180>;
+            tapping-term-ms = <250>;
             bindings = <&kp X>, <&kp RC(X)>;
         };
 
         cut_w_dance: tapdancew_cut {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <180>;
+            tapping-term-ms = <250>;
             bindings = <&kp X>, <&kp LC(X)>;
         };
 
@@ -114,7 +114,7 @@
         app_paste: app_paste {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <180>;
+            tapping-term-ms = <250>;
             bindings = <&kp P>, <&kp RC(LS(V))>;
         };
 
@@ -143,6 +143,8 @@
             label = "SLASH_COMMENT";
             #binding-cells = <0>;
             bindings = <&kp INTERNATIONAL_1>, <&kp RC(INTERNATIONAL_1)>;
+
+            tapping-term-ms = <250>;
         };
     };
 
