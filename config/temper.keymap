@@ -138,6 +138,13 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+
+        slash_comment: slash_comment {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SLASH_COMMENT";
+            #binding-cells = <0>;
+            bindings = <&kp INTERNATIONAL_1>, <&kp RC(INTERNATIONAL_1)>;
+        };
     };
 
     /*                KEY POSITIONS
@@ -156,7 +163,7 @@
         lt_gt_combo {
             timeout-ms = <50>;
             key-positions = <1 2>;
-            layers = <SYM>;
+            layers = <0>;
             bindings = <&lt_gt_macro>;
         };
 
@@ -165,7 +172,7 @@
         lb_rb_combo {
             timeout-ms = <50>;
             key-positions = <3 4>;
-            layers = <SYM>;
+            layers = <0>;
             bindings = <&lb_rb_macro>;
         };
 
@@ -182,8 +189,8 @@
 
         ls_rs_combo {
             timeout-ms = <50>;
-            key-positions = <11 12>;
-            layers = <SYM>;
+            key-positions = <24 23>;
+            layers = <0>;
             bindings = <&ls_rs_macro>;
         };
 
@@ -192,7 +199,7 @@
         mmb_combo {
             timeout-ms = <50>;
             key-positions = <25 26>;
-            layers = <SYM>;
+            layers = <0>;
             bindings = <&mkp MCLK>;
         };
 
@@ -200,8 +207,8 @@
 
         next_combo {
             timeout-ms = <50>;
-            key-positions = <23 24>;
-            layers = <SYM>;
+            key-positions = <22 21>;
+            layers = <0>;
             bindings = <&kp C_NEXT>;
         };
 
@@ -210,7 +217,7 @@
         prev_combo {
             timeout-ms = <50>;
             key-positions = <21 22>;
-            layers = <SYM>;
+            layers = <0>;
             bindings = <&kp C_PREV>;
         };
     };
@@ -329,10 +336,10 @@
         default_layer {
             label = "DEFAULT";
             bindings = <
-&kp Q             &kp W           &mt LEFT_BRACKET E  &kp R         &kp T               &kp Y          &mt LEFT_BRACKET U  &mt LEFT_BRACKET I  &mt APOS O       &app_paste
-&mt APOSTROPHE A  &hm LEFT_ALT S  &hm LCTRL D         &hm LSHFT F   &kp G               &search_dance  &hm RSHFT J         &hm RCTRL K         &hm RIGHT_ALT L  &hm RIGHT_GUI SEMI
-&caps_dance       &cut_dance      &copy_dance         &paste_dance  &kp B               &kp N          &kp M               &kp COMMA           &kp DOT          &lt 4 SLASH
-                                  &lt 2 TAB           &kp SPACE     &lt 3 LEFT_BRACKET  &kp ENTER      &kp BACKSPACE       &lt 5 DELETE
+&kp Q             &kp W           &mt LEFT_BRACKET E  &kp R         &kp T               &kp Y      &mt LEFT_BRACKET U  &mt LEFT_BRACKET I  &mt APOS O       &app_paste
+&mt APOSTROPHE A  &hm LEFT_ALT S  &hm LCTRL D         &hm LSHFT F   &kp G               &kp H      &hm RSHFT J         &hm RCTRL K         &hm RIGHT_ALT L  &hm RIGHT_GUI SEMI
+&caps_dance       &cut_dance      &copy_dance         &paste_dance  &kp B               &kp N      &kp M               &kp COMMA           &kp DOT          &lt 4 SLASH
+                                  &lt 2 TAB           &kp SPACE     &lt 3 LEFT_BRACKET  &kp ENTER  &kp BACKSPACE       &lt 5 DELETE
             >;
         };
 
@@ -359,9 +366,9 @@
         sym_layer {
             label = "SYM";
             bindings = <
-&kp GRAVE        &kp LS(NUMBER_6)     &kp LS(MINUS)        &kp LS(RIGHT_BRACE)  &kp LS(BACKSLASH)  &none  &kp HOME        &kp UP_ARROW  &kp END     &kp PAGE_UP
-&kp LS(GRAVE)    &kp EQUAL            &kp MINUS            &kp LS(N9)           &kp LS(N0)         &none  &kp LEFT_ARROW  &kp DOWN      &kp RIGHT   &kp PAGE_DOWN
-&kp NON_US_BSLH  &kp LS(NON_US_BSLH)  &kp INTERNATIONAL_1  &kp RIGHT_BRACKET    &kp BACKSLASH      &none  &kp TAB         &kp ESCAPE    &kp INSERT  &none
+&kp GRAVE        &kp LS(NUMBER_6)     &kp LS(MINUS)   &kp LS(RIGHT_BRACE)  &kp LS(BACKSLASH)  &none  &kp HOME        &kp UP_ARROW  &kp END     &kp PAGE_UP
+&kp LS(GRAVE)    &kp EQUAL            &kp MINUS       &kp LS(N9)           &kp LS(N0)         &none  &kp LEFT_ARROW  &kp DOWN      &kp RIGHT   &kp PAGE_DOWN
+&kp NON_US_BSLH  &kp LS(NON_US_BSLH)  &slash_comment  &kp RIGHT_BRACKET    &kp BACKSLASH      &none  &kp TAB         &kp ESCAPE    &kp INSERT  &none
             >;
         };
 
