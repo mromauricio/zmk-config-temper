@@ -164,7 +164,7 @@
             timeout-ms = <50>;
             key-positions = <1 2>;
             layers = <0>;
-            bindings = <&lt_gt_macro>;
+            bindings = <&dq_macro>;
         };
 
         // Combo to type { } and move cursor left
@@ -254,7 +254,9 @@
         lb_rb_macro: lb_rb_macro_with_cursor {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp LBRC &kp RBRC &kp LEFT>;
+            bindings =
+                <&macro_tap>,
+                <&kp LS(RIGHT_BRACE) &kp LS(BACKSLASH) &kp LEFT>;
         };
 
         // Macro to type ( ) and move cursor left
@@ -262,7 +264,7 @@
         lp_rp_macro: lp_rp_macro_with_cursor {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp LPAR &kp RPAR &kp LEFT>;
+            bindings = <&macro_tap>, <&kp LS(N9) &kp LS(N0) &kp LEFT>;
         };
 
         // Macro to type [ ] and move cursor left
@@ -270,7 +272,7 @@
         ls_rs_macro: ls_rs_macro_with_cursor {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp LBKT &kp RBKT &kp LEFT>;
+            bindings = <&macro_tap>, <&kp RIGHT_BRACKET &kp BACKSLASH &kp LEFT>;
         };
 
         // Macro to open homerow app (LGUI+LCTRL+LSHFT) 
@@ -290,7 +292,7 @@
         dq_macro: dq_macro_with_cursor {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp DQT &kp DQT &kp LEFT>;
+            bindings = <&macro_tap>, <&kp LS(GRAVE) &kp LS(GRAVE) &kp LEFT>;
         };
 
         nomachine: nomachine_settings {
