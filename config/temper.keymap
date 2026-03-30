@@ -301,6 +301,20 @@
             #binding-cells = <0>;
             bindings = <&macro_tap>, <&kp GRAVE &kp GRAVE &kp LEFT>;
         };
+
+        bomdia_macro: bomdia_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(B) &kp O &kp M &kp SPACE &kp D &kp I &kp A &kp EXCL &none>;
+            label = "BOMDIA_MACRO";
+        };
+
+        homeoffice_macro: homeoffice_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(H) &kp O &kp M &kp E &kp SPACE &kp O &kp F &kp F &kp I &kp C &kp E &none>;
+            label = "HOMEOFFICE_MACRO";
+        };
     };
 
     keymap {
@@ -348,17 +362,17 @@
         func_layer {
             label = "FUNC";
             bindings = <
-&bt BT_CLR  &bt BT_NXT  &bt BT_PRV    &bootloader   &sys_reset    &sys_reset  &bootloader  &none   &none   &none
-&kp F11     &kp F12     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &kp LNLCK   &none        &none   &none   &tog WIN
-&kp F1      &kp F2      &kp F3        &kp F4        &kp F5        &kp F6      &kp F7       &kp F8  &kp F9  &kp F10 ______ ______ ______ ______ ______ ______
+&bt BT_CLR  &bt BT_NXT  &bt BT_PRV    &bootloader   &sys_reset    &sys_reset  &bootloader  &none  &none  &none
+&none       &none       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &kp LNLCK   &none        &none  &none  &tog WIN
+&none       &none       &none         &none         &none         &none       &none        &none  &none  &none
             >;
         };
 
         accent {
             bindings = <
-&kp HASH          &kp DOLLAR            &kp PERCENT       &kp AMPS                 &kp STAR  &trans  &trans      &trans     &trans  &trans
-&kp LEFT_BRACKET  &kp RS(LEFT_BRACKET)  &kp SINGLE_QUOTE  &kp LS(SINGLE_QUOTE)     &trans    &trans  &ti_brasil  &mau_acer  &trans  &trans
-&trans            &kp AT_SIGN           &kp EXCLAMATION   &kp LS(INTERNATIONAL_1)  &trans    &trans  &trans      &trans     &trans  &trans
+&kp HASH          &kp DOLLAR            &kp PERCENT       &kp AMPS                 &kp STAR  &trans  &trans      &trans     &trans         &trans
+&kp LEFT_BRACKET  &kp RS(LEFT_BRACKET)  &kp SINGLE_QUOTE  &kp LS(SINGLE_QUOTE)     &trans    &none   &ti_brasil  &mau_acer  &bomdia_macro  &homeoffice_macro
+&trans            &kp AT_SIGN           &kp EXCLAMATION   &kp LS(INTERNATIONAL_1)  &trans    &trans  &trans      &trans     &trans         &trans
                                         &trans            &trans                   &trans    &trans  &trans      &trans
             >;
         };
