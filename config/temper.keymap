@@ -305,7 +305,7 @@
         bomdia_macro: bomdia_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(B) &kp O &kp M &kp SPACE &kp D &kp I &kp A &kp EXCL &none>;
+            bindings = <&kp LS(B) &kp O &kp M &kp SPACE &kp D &kp I &kp A &kp EXCL &kp SPACE &none>;
             label = "BOMDIA_MACRO";
         };
 
@@ -314,6 +314,13 @@
             #binding-cells = <0>;
             bindings = <&kp LS(H) &kp O &kp M &kp E &kp SPACE &kp O &kp F &kp F &kp I &kp C &kp E &none>;
             label = "HOMEOFFICE_MACRO";
+        };
+
+        boatarde_macro: boatarde_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(B) &kp O &kp A &kp SPACE &kp T &kp A &kp R &kp D &kp E &kp EXCLAMATION &kp SPACE &none>;
+            label = "BOATARDE_MACRO";
         };
     };
 
@@ -370,9 +377,9 @@
 
         accent {
             bindings = <
-&kp HASH          &kp DOLLAR            &kp PERCENT       &kp AMPS                 &kp STAR  &trans  &trans      &trans     &trans         &trans
-&kp LEFT_BRACKET  &kp RS(LEFT_BRACKET)  &kp SINGLE_QUOTE  &kp LS(SINGLE_QUOTE)     &trans    &none   &ti_brasil  &mau_acer  &bomdia_macro  &homeoffice_macro
-&trans            &kp AT_SIGN           &kp EXCLAMATION   &kp LS(INTERNATIONAL_1)  &trans    &trans  &trans      &trans     &trans         &trans
+&kp HASH          &kp DOLLAR            &kp PERCENT       &kp AMPS                 &kp STAR  &trans  &trans      &trans     &trans           &trans
+&kp LEFT_BRACKET  &kp RS(LEFT_BRACKET)  &kp SINGLE_QUOTE  &kp LS(SINGLE_QUOTE)     &trans    &none   &ti_brasil  &mau_acer  &bomdia_macro    &homeoffice_macro
+&trans            &kp AT_SIGN           &kp EXCLAMATION   &kp LS(INTERNATIONAL_1)  &trans    &trans  &trans      &trans     &boatarde_macro  &trans
                                         &trans            &trans                   &trans    &trans  &trans      &trans
             >;
         };
