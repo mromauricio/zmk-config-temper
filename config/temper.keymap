@@ -322,6 +322,18 @@
             bindings = <&kp LS(B) &kp O &kp A &kp SPACE &kp T &kp A &kp R &kp D &kp E &kp EXCLAMATION &kp SPACE &none>;
             label = "BOATARDE_MACRO";
         };
+
+        ctrl_alt_del_macro: ctrl_alt_del_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LEFT_ALT &kp DELETE>,
+                <&macro_release>,
+                <&kp LCTRL &kp LEFT_ALT &kp DEL>;
+
+            label = "CTRL_ALT_DEL_MACRO";
+        };
     };
 
     keymap {
@@ -369,9 +381,9 @@
         func_layer {
             label = "FUNC";
             bindings = <
-&bt BT_CLR  &bt BT_NXT  &bt BT_PRV    &bootloader   &sys_reset    &sys_reset  &bootloader  &none  &none  &none
-&none       &none       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &kp LNLCK   &none        &none  &none  &tog WIN
-&none       &none       &none         &none         &none         &none       &none        &none  &none  &none
+&bt BT_CLR           &bt BT_NXT  &bt BT_PRV    &bootloader   &sys_reset    &sys_reset  &bootloader  &none  &none  &none
+&none                &none       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &kp LNLCK   &none        &none  &none  &tog WIN
+&ctrl_alt_del_macro  &none       &none         &none         &none         &none       &none        &none  &none  &none
             >;
         };
 
